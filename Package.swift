@@ -5,6 +5,8 @@ import PackageDescription
 
 let package = Package(
     name: "XCGLogger",
+        // Added for Xcode 27 compatibility (upstream gone silent)
+    platforms: [.iOS(.v15), .watchOS(.v4), .tvOS(.v12), .macOS(.v10_13)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
